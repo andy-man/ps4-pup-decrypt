@@ -4,7 +4,7 @@ CC	:= gcc
 OBJCOPY	:= objcopy
 ODIR	:= build
 SDIR	:= source
-IDIRS	:= -I$(LIBPS4)/include -Iinclude
+IDIRS   := -Iinclude -I$(LIBPS4)/include
 LDIRS	:= -L$(LIBPS4)
 MAPFILE := $(shell basename $(CURDIR)).map
 CFLAGS	:= $(IDIRS) -Os -std=gnu11 -ffunction-sections -fdata-sections -fno-builtin -nostartfiles -nostdlib -Wall -masm=intel -march=btver2 -mtune=btver2 -m64 -mabi=sysv -mcmodel=small -fpie
